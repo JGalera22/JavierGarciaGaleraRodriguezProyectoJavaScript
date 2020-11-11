@@ -1,0 +1,21 @@
+{
+  "name": "javiergarciagalerarodriguezproyectojavascript",
+  "version": "1.0.0",
+  "description": "Proyecto JavaScript",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JGalera22/JavierGarciaGaleraRodriguezProyectoJavaScript.git"
+  },
+  "author": "Javier García-Galera Rodríguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JGalera22/JavierGarciaGaleraRodriguezProyectoJavaScript/issues"
+  },
+  "homepage": "https://github.com/JGalera22/JavierGarciaGaleraRodriguezProyectoJavaScript#readme"
+}
