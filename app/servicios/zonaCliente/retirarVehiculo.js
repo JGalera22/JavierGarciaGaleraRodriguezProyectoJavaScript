@@ -1,6 +1,6 @@
 import {Vehiculo} from '../../model/vehiculo.js'
 import {Parking} from '../../model/parking.js'
-import * as moment from 'moment';
+import moment from 'moment';
 
 let parking = new Parking();
 let vehiculo = new Vehiculo();
@@ -11,20 +11,22 @@ let parking = new Parking(45, 15, 15, 15, 5, 5, 5);
 */
 
 function retirarVehiculo(vehiculo, parking){
+    let c = moment().startOf('day').fromNow();
+    //let a = moment.duration(vehiculo.entradaParking-c).humanize();
 
                 if(vehiculo.tipo == 1 && parking.plazasOcupadasMoto != 0){
                     parking.plazasOcupadasMoto --;
-                    vehiculo.coste = parking.costeMoto * moment.duration(vehiculo.entradaParking.fromNow()); 
+                    vehiculo.coste = parking.costeMoto * moment.duration(vehiculo.entradaParking-c).humanize(); 
                     return parking.plazasOcupadasMoto;
                 }
                 if(vehiculo.tipo == 2 && parking.plazasOcupadasTurismo != 0){
                     parking.plazasOcupadasTurismo --;
-                    vehiculo.coste = parking.costeTurismo * moment.duration(vehiculo.entradaParking.fromNow());
+                    vehiculo.coste = parking.costeTurismo * moment.duration(vehiculo.entradaParking-c).humanize();
                     return parking.plazasOcupadasTurismo;
                 }
                 if(vehiculo.tipo == 3 && parking.plazasOcupadasCaravana != 0){
                     parking.plazasOcupadasCaravana --;
-                    vehiculo.coste = parking.costeCaravana * moment.duration(vehiculo.entradaParking.fromNow());
+                    vehiculo.coste = parking.costeCaravana * moment.duration(vehiculo.entradaParking-c).humanize();
                     return parking.plazasOcupadasCaravana;
                 }
     return vehiculo.coste;         

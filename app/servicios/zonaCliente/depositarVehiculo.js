@@ -1,6 +1,6 @@
 import {Vehiculo} from '../../model/vehiculo.js'
 import {Parking} from '../../model/parking.js'
-import * as moment from 'moment';
+import moment from 'moment';
 
 let parking = new Parking();
 let vehiculo = new Vehiculo();
