@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/JGalera22/JavierGarciaGaleraRodriguezProyectoJavaScript/issues"
   },
-  "homepage": "https://github.com/JGalera22/JavierGarciaGaleraRodriguezProyectoJavaScript#readme"
+  "homepage": "https://github.com/JGalera22/JavierGarciaGaleraRodriguezProyectoJavaScript#readme",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
 }

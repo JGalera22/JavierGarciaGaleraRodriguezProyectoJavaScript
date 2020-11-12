@@ -1,5 +1,6 @@
 import {Vehiculo} from '../../model/vehiculo.js'
 import {Parking} from '../../model/parking.js'
+import * as moment from 'moment';
 
 let parking = new Parking();
 let vehiculo = new Vehiculo();
@@ -15,14 +16,17 @@ function depositarVehiculo(vehiculo, parking){
 
                 if(vehiculo.tipo == 1 && parking.plazasMoto > parking.plazasOcupadasMoto){
                     parking.plazasOcupadasMoto ++;
+                    vehiculo.setEntradaParking(moment().format('HH:mm'));
                     return parking.plazasOcupadasMoto;
                 }
                 if(vehiculo.tipo == 2 && parking.plazasTurismo > parking.plazasOcupadasTurismo){
                     parking.plazasOcupadasTurismo ++;
+                    vehiculo.setEntradaParking(moment().format('HH:mm'));
                     return parking.plazasOcupadasTurismo;
                 }
                 if(vehiculo.tipo == 3 && parking.plazasCaravana > parking.plazasOcupadasCaravana){
                     parking.plazasOcupadasCaravana ++;
+                    vehiculo.setEntradaParking(moment().format('HH:mm'));
                     return parking.plazasOcupadasCaravana;
                 }
         }
