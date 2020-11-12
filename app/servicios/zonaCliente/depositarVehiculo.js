@@ -33,6 +33,8 @@ function depositarVehiculo(vehiculo, parking){
        
 }
 
+console.log(vehiculo.entradaParking);
+
 /*
 console.log("número de plazas de motos: " + (parking.plazasMoto - parking.plazasOcupadasMoto));
 console.log("número de plazas de turismos: " + (parking.plazasTurismo - parking.plazasOcupadasTurismo));

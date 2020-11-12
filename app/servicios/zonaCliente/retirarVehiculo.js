@@ -12,21 +12,21 @@ let parking = new Parking(45, 15, 15, 15, 5, 5, 5);
 
 function retirarVehiculo(vehiculo, parking){
     let c = moment().startOf('day').fromNow();
-    //let a = moment.duration(vehiculo.entradaParking-c).humanize();
+    let a = new Date(moment.duration(vehiculo.entradaParking-c).humanize());
 
                 if(vehiculo.tipo == 1 && parking.plazasOcupadasMoto != 0){
                     parking.plazasOcupadasMoto --;
-                    vehiculo.coste = parking.costeMoto * moment.duration(vehiculo.entradaParking-c).humanize(); 
+                    vehiculo.coste = parking.costeMoto * (a.getHours() * 60 + a.getMinutes()); 
                     return parking.plazasOcupadasMoto;
                 }
                 if(vehiculo.tipo == 2 && parking.plazasOcupadasTurismo != 0){
                     parking.plazasOcupadasTurismo --;
-                    vehiculo.coste = parking.costeTurismo * moment.duration(vehiculo.entradaParking-c).humanize();
+                    vehiculo.coste = parking.costeTurismo * (a.getHours() * 60 + a.getMinutes());
                     return parking.plazasOcupadasTurismo;
                 }
                 if(vehiculo.tipo == 3 && parking.plazasOcupadasCaravana != 0){
                     parking.plazasOcupadasCaravana --;
-                    vehiculo.coste = parking.costeCaravana * moment.duration(vehiculo.entradaParking-c).humanize();
+                    vehiculo.coste = parking.costeCaravana * (a.getHours() * 60 + a.getMinutes());
                     return parking.plazasOcupadasCaravana;
                 }
     return vehiculo.coste;         

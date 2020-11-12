@@ -9,7 +9,7 @@ class Vehiculo {
     }
 
     toString(){
-        return console.log(this.nombre + " " + this.matricula + " " + this.coste + "€" + this.tipo + " " + this.entradaParking);
+        return console.log(this.nombre + " " + this.matricula + " " + this.coste + "€ " + this.tipo + " " + this.entradaParking);
     }
 
     getEntradaParking() {

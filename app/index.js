@@ -21,12 +21,28 @@ console.log(abonado1.fechaCancelacion);
 
 console.log(abonado1.toString());
 console.log(vehiculo1.toString());
+console.log(vehiculo2.toString());
 
 depositarVehiculo(vehiculo1, parking);
 console.log("número de plazas de motos: " + (parking.plazasMoto - parking.plazasOcupadasMoto));
 console.log("número de plazas de turismos: " + (parking.plazasTurismo - parking.plazasOcupadasTurismo));
 console.log("número de plazas de caravanas: " + (parking.plazasCaravana - parking.plazasOcupadasCarava));
 
+/*******************************************************************************************************/
+console.log(' ');
+console.log(' ');
+
+/*******************************************************************************************************/
+
+
+console.log(vehiculo2.coste);
+
+depositarVehiculo(vehiculo2, parking);
+console.log("número de plazas de motos: " + (parking.plazasMoto - parking.plazasOcupadasMoto));
+console.log("número de plazas de turismos: " + (parking.plazasTurismo - parking.plazasOcupadasTurismo));
+console.log("número de plazas de caravanas: " + (parking.plazasCaravana - parking.plazasOcupadasCarava));
+
+console.log(' ');
 
 retirarVehiculo(vehiculo2, parking);
 console.log("número de plazas de motos: " + (parking.plazasMoto - parking.plazasOcupadasMoto));
@@ -35,7 +51,7 @@ console.log("número de plazas de caravanas: " + (parking.plazasCaravana - parki
 
 console.log(vehiculo2.coste);
 
-
+/*******************************************************************************************************/
 
 
 
