@@ -3,11 +3,12 @@ import { Vehiculo } from './model/vehiculo.js';
 import { Parking } from './model/parking.js';
 import {depositarVehiculo} from './servicios/zonaCliente/depositarVehiculo.js'
 import {retirarVehiculo} from './servicios/zonaCliente/retirarVehiculo.js'
+import {depositarVehiculoAbonado} from './servicios/zonaCliente/depositarVehiculoAbonado.js'
 
 let vehiculo1 = new Vehiculo("audi","HIP2002", 16, 1, '00:00');
-let vehiculo2 = new Vehiculo("audi","HIP2002", 12, 2, '00:00');
-let abonado1 = new Abonado("Anual", "45544554E", "Paco de Luis", "Federico García", 12345678912345, 956565656, "pacodeluis@email.com", "22/01/90", "22/01/21");
-let parking = new Parking(45, 15, 15, 15, 5, 5, 5, 0.08, 0.12, 0.45);
+let vehiculo2 = new Vehiculo("audi","PIH2002", 12, 2, '00:00');
+let abonado1 = new Abonado("Anual", "123456789A", "Paco de Luis", "Federico García", 12345678912345, 956565656, "pacodeluis@email.com", "22/01/90", "22/01/21");
+let parking = new Parking(45, 15, 15, 15, 5, 5, 5, 0.08, 0.12, 0.45, 6, 3, 2);
 
 
 console.log(abonado1.bono);
@@ -53,6 +54,11 @@ console.log(vehiculo2.coste);
 
 /*******************************************************************************************************/
 
-
-
+depositarVehiculoAbonado(vehiculo1, parking, abonado1);
+console.log("número de plazas de motos: " + (parking.plazasMoto - parking.plazasOcupadasMoto));
+console.log("número de plazas de turismos: " + (parking.plazasTurismo - parking.plazasOcupadasTurismo));
+console.log("número de plazas de caravanas: " + (parking.plazasCaravana - parking.plazasOcupadasCarava));
+console.log("número de plazas reservadas de motos: " + parking.plazasReservadasMoto);
+console.log("número de plazas reservadas de turismos: " + parking.plazasReservadasTurismo);
+console.log("número de plazas reservadas de caravanas: " + parking.plazasReservadasCaravana);
 

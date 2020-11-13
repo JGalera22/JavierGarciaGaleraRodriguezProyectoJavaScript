@@ -11,7 +11,7 @@ let parking = new Parking(45, 15, 15, 15, 5, 5, 5);
 */
 
 function retirarVehiculo(vehiculo, parking){
-    let c = moment().startOf('day').fromNow();
+    let c = moment().startOf('day');
     let a = new Date(moment.duration(vehiculo.entradaParking-c).humanize());
 
                 if(vehiculo.tipo == 1 && parking.plazasOcupadasMoto != 0){

@@ -12,19 +12,20 @@ let parking = new Parking(45, 15, 15, 15, 5, 5, 5);
 
 function depositarVehiculo(vehiculo, parking){
 
-        if(parking.plazasTotales >= (parking.plazasOcupadasTurismo + parking.plazasOcupadasMoto + parking.plazasOcupadasCarava)){
+        if(parking.plazasTotales > (parking.plazasOcupadasTurismo + parking.plazasOcupadasMoto + parking.plazasOcupadasCarava
+            + parking.plazasReservadasMoto + parking.plazasReservadasTurismo + parking.plazasReservadasCaravana)){
 
-                if(vehiculo.tipo == 1 && parking.plazasMoto > parking.plazasOcupadasMoto){
+                if(vehiculo.tipo == 1 && parking.plazasMoto > parking.plazasOcupadasMoto + parking.plazasReservadasMoto){
                     parking.plazasOcupadasMoto ++;
                     vehiculo.setEntradaParking(moment().format('HH:mm'));
                     return parking.plazasOcupadasMoto;
                 }
-                if(vehiculo.tipo == 2 && parking.plazasTurismo > parking.plazasOcupadasTurismo){
+                if(vehiculo.tipo == 2 && parking.plazasTurismo > parking.plazasOcupadasTurismo + parking.plazasReservadasTurismo){
                     parking.plazasOcupadasTurismo ++;
                     vehiculo.setEntradaParking(moment().format('HH:mm'));
                     return parking.plazasOcupadasTurismo;
                 }
-                if(vehiculo.tipo == 3 && parking.plazasCaravana > parking.plazasOcupadasCaravana){
+                if(vehiculo.tipo == 3 && parking.plazasCaravana > parking.plazasOcupadasCaravana + parking.plazasReservadasCaravana){
                     parking.plazasOcupadasCaravana ++;
                     vehiculo.setEntradaParking(moment().format('HH:mm'));
                     return parking.plazasOcupadasCaravana;
