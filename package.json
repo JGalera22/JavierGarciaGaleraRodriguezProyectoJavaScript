@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/JGalera22/JavierGarciaGaleraRodriguezProyectoJavaScript#readme",
   "dependencies": {
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "readline-sync": "^1.4.10",
+    "required": "^1.0.0"
   }
 }
